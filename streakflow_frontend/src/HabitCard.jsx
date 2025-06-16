@@ -5,14 +5,22 @@ import styles from "./HabitCard.module.css";
  * PUBLIC_INTERFACE
  * HabitCard displays a single habit's info: name, frequency, streak, done checkbox,
  * and edit/delete icon buttons, in a soft, rounded card style.
+ * Now also renders a gradient animated progress bar with a goal percentage.
  */
+// PUBLIC_INTERFACE
 function HabitCard({
   habit,
   onToggleDone,
   onEdit,
   onDelete,
 }) {
-  const { id, habitName, frequency, currentStreak, doneToday } = habit;
+  const { id, habitName, frequency, currentStreak, doneToday, goal = 21 } = habit;
+
+  // Defensive: fallback for missing goal
+  const streakGoal = goal > 0 ? goal : 21;
+  const rawPercent = Math.min(100, Math.round((currentStreak / streakGoal) * 100));
+  const percentDisplay = isNaN(rawPercent) ? 0 : rawPercent;
+  const progressBarId = `progressbar-${id}`;
 
   return (
     <div className={styles.card} tabIndex={0} aria-label={`Habit card: ${habitName}`}>
@@ -57,6 +65,25 @@ function HabitCard({
           <span className={styles.streakIcon} role="img" aria-label="streak">🔥</span>
           {currentStreak}d
         </span>
+      </div>
+      {/* Progress bar for streak/goal */}
+      <div className={styles.progressBarRow}>
+        <div
+          className={styles.progressBarWrapper}
+          role="progressbar"
+          aria-valuenow={currentStreak}
+          aria-valuemin={0}
+          aria-valuemax={streakGoal}
+          aria-label={`Progress: ${percentDisplay}% (${currentStreak} out of ${streakGoal})`}
+          id={progressBarId}
+        >
+          <div
+            className={styles.progressBarInner}
+            style={{ width: `${Math.min(100, (currentStreak / streakGoal) * 100)}%` }}
+            aria-hidden="true"
+          />
+        </div>
+        <span className={styles.progressPercentLabel}>{percentDisplay}%</span>
       </div>
       <label className={styles.doneLabel}>
         <input

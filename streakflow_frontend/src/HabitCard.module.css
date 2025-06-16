@@ -11,6 +11,59 @@
   outline: 1px solid transparent;
 }
 
+/* Progress Bar Row: horizontal layout */
+.progressBarRow {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  min-height: 19px;
+}
+
+/* Outer bar wrapper */
+.progressBarWrapper {
+  position: relative;
+  flex: 1 1 90px;
+  background: #f0f5f3;
+  border-radius: 12px;
+  height: 13px;
+  overflow: hidden;
+  box-shadow: 0 1.5px 3.5px rgba(180,180,180,0.07);
+  outline: 1.2px solid #eee7e1;
+}
+
+/* Inner bar (animated, gradient fill) */
+.progressBarInner {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: width 0.72s cubic-bezier(0.45,0.03,0.31,0.96);
+  border-radius: 12px 12px 12px 12px / 10.5px 10.5px 10.5px 10.5px;
+  background: linear-gradient(90deg, #A8D5BA 10%, #F4C2C2 92%);
+  box-shadow: 0 0.6px 5.5px 0 rgba(244,194,194, 0.09);
+}
+
+/* Percentage label to right of progress bar */
+.progressPercentLabel {
+  font-size: 0.98rem;
+  color: #7e9a95;
+  margin-left: 0.1em;
+  min-width: 28px;
+  font-weight: 500;
+  background: none;
+  letter-spacing: 0.01em;
+  text-align: left;
+  user-select: none;
+}
+
+/* Show visual focus for accessibility */
+.progressBarWrapper:focus-visible {
+  outline: 2.5px solid var(--primary, #A8D5BA);
+  box-shadow: 0 1px 5px #a8d5ba55;
+}
+
 .card:focus-within, .card:hover {
   box-shadow: 0 8px 34px 0 rgba(168,213,186,0.26), 0 4px 14px #e2e6e4;
   background: #faf6f3;
