@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 import TopNavBar from './TopNavBar';
 
-// Note: Ensure no direct reference to PUBLIC_URL (should be process.env.PUBLIC_URL if used)
-// No usage found here, so leaving as is
-
 // PUBLIC_INTERFACE
 function App() {
   return (

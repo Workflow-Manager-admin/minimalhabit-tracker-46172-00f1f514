@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.38rem 1.1rem;
+  margin: 2.4rem auto 0 auto;
+  width: 95%;
+  max-width: 650px;
+}
+
+@media (max-width: 780px) {
+  .grid {
+    grid-template-columns: 1fr;
+    width: 98%;
+    gap: 1.18rem 0.3rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.emptyState {
+  text-align: center;
+  color: #adadb6;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1.7rem 0 3rem 0;
+}

@@ -11,11 +11,11 @@ asset bundle.js 1.41 MiB [emitted] (name: main)
 asset index.html 1.92 KiB [emitted]
 runtime modules 27.5 KiB 14 modules
 modules by path ./node_modules/ 1.24 MiB 31 modules
-modules by path ./src/ 14.8 KiB
+modules by path ./src/ 14.9 KiB
   modules by path ./src/*.css 11.5 KiB 6 modules
-  modules by path ./src/*.js 1.94 KiB
+  modules by path ./src/*.js 2.08 KiB
     ./src/index.js 530 bytes [built] [code generated]
-    ./src/App.js 1.43 KiB [built] [code generated]
+    ./src/App.js 1.56 KiB [built] [code generated]
   ./src/TopNavBar.jsx 1.35 KiB [built] [code generated]
 modules by path ./.ve/ 15.1 KiB
   modules by path ./.ve/*.js 10.6 KiB 2 modules
@@ -23,14 +23,25 @@ modules by path ./.ve/ 15.1 KiB
     ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
     ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
   ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 1430 ms
+webpack 5.99.9 compiled successfully in 1357 ms
 assets by status 1.92 KiB [cached] 1 asset
 assets by path *.js 1.41 MiB
   asset bundle.js 1.41 MiB [emitted] (name: main)
-  asset main.e44d19a00fe9eb545f3a.hot-update.js 4.03 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.e44d19a00fe9eb545f3a.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.41 MiB = bundle.js 1.41 MiB main.e44d19a00fe9eb545f3a.hot-update.js 4.03 KiB
+  asset main.4be2b390f296da936e11.hot-update.js 3.9 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.4be2b390f296da936e11.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.41 MiB = bundle.js 1.41 MiB main.4be2b390f296da936e11.hot-update.js 3.9 KiB
 cached modules 1.27 MiB [cached] 44 modules
 runtime modules 27.5 KiB 14 modules
-./src/App.js 1.56 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 112 ms
+./src/App.js 1.43 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 80 ms
+Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
+assets by status 1.92 KiB [cached] 1 asset
+assets by path *.js 1.41 MiB
+  asset bundle.js 1.41 MiB [emitted] (name: main)
+  asset main.ebf9b9011db48b93cbb3.hot-update.js 2.92 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.ebf9b9011db48b93cbb3.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.41 MiB = bundle.js 1.41 MiB main.ebf9b9011db48b93cbb3.hot-update.js 2.92 KiB
+cached modules 1.27 MiB [cached] 44 modules
+runtime modules 27.5 KiB 14 modules
+./src/index.js 701 bytes [built] [code generated]
+webpack 5.99.9 compiled successfully in 51 ms
