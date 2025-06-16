@@ -1,0 +1,83 @@
+.card {
+  width: 300px;
+  margin: 56px auto 0 auto; /* vertical margin from navbar */
+  background: var(--secondary, #F7E9E4);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(140, 180, 180, 0.17), 0 3px 8px 0 #e5ecea;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  color: var(--primary, #A8D5BA);
+  letter-spacing: -0.5px;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+  color: #444;
+}
+
+.input, .select {
+  border: none;
+  border-radius: 8px;
+  padding: 0.60rem 0.72rem;
+  font-size: 1rem;
+  margin-top: 0.02rem;
+  background: #fff;
+  color: #271a09;
+  box-shadow: 0 1px 3px rgba(230,206,220,0.08);
+  box-sizing: border-box;
+  outline: 1.5px solid transparent;
+  transition: outline-color 0.2s;
+}
+
+.input:focus,
+.select:focus {
+  outline: 2px solid var(--accent, #F4C2C2);
+  background: #fffbe5;
+}
+
+.addHabitBtn {
+  width: 100%;
+  background: linear-gradient(90deg, #A8D5BA, #F4C2C2 90%);
+  color: #283747;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.11rem;
+  font-weight: 600;
+  padding: 12px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(244,194,194,0.12);
+  transition: background 0.22s, color 0.18s;
+}
+
+.addHabitBtn:hover, .addHabitBtn:focus {
+  background: linear-gradient(90deg, #F4C2C2 30%, #A8D5BA 100%);
+  color: #693002;
+}
+
+@media (max-width: 430px) {
+  .card {
+    width: 98vw;
+    min-width: 0;
+    max-width: 350px;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+}
